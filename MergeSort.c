@@ -42,7 +42,7 @@ void merge(int arr[], int l, int m, int r){
 void mergeSort(int arr[], int l, int r){
     
     if (l < r) {
-        int m = l + (r - l) / 2;
+        int m = (l+r) / 2;
         mergeSort(arr, l, m);
         mergeSort(arr, m + 1, r);
 
@@ -52,7 +52,7 @@ void mergeSort(int arr[], int l, int r){
 
 int main(){
     
-    int arr[] = {38, 27, 43, 10};
+    int arr[] = {15,5,24,8,1,3,16,10,20,17};
     int arr_size = sizeof(arr) / sizeof(arr[0]);
 
     mergeSort(arr, 0, arr_size - 1);
